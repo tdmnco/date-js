@@ -1,0 +1,46 @@
+{
+  "author": "Kasper Tidemann",
+  "bugs": {
+    "url": "https://github.com/tdmnco/date-js/issues"
+  },
+  "description": "Date.js is a simple library for working with dates in web applications.",
+  "devDependencies": {
+    "@babel/core": "7.8.7",
+    "@babel/plugin-transform-runtime": "7.8.3",
+    "@babel/preset-env": "7.8.7",
+    "@babel/runtime": "7.8.7",
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "7.1.1",
+    "eslint": "6.8.0",
+    "jest": "25.1.0",
+    "mkdirp": "1.0.3",
+    "npm": "6.14.2",
+    "rimraf": "3.0.2",
+    "rollup": "1.32.0",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-uglify": "6.0.4"
+  },
+  "homepage": "https://github.com/tdmnco/date-js#readme",
+  "keywords": [
+    "javascript",
+    "date",
+    "library",
+    "tdmnco"
+  ],
+  "license": "MIT",
+  "main": "dist/js/date.js",
+  "name": "tdmnco-date",
+  "scripts": {
+    "dist": "rollup -c",
+    "postdist": "npm run test:dist",
+    "predist": "rimraf dist && mkdirp dist/js",
+    "pretest": "eslint src/js/**/*.js",
+    "test:dev": "jest --verbose test/js/date.dev.test",
+    "test:dist": "jest --verbose test/js/date.dist.test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdmnco/date-js.git"
+  },
+  "version": "0.0.1"
+}
